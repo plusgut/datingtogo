@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import adapter from '../../Helper/adapter';
+
 
 class Register extends Component {
   constructor(props) {
@@ -13,7 +15,7 @@ class Register extends Component {
       user: {},
       infos: [{
         label: 'Username',
-        key: 'myself',
+        key: 'username',
         input: this.inputText.bind(this),
         option: gender,
       }, {
@@ -38,8 +40,9 @@ class Register extends Component {
     this.setValue(key, evt.target.value);
   }
 
-  submit() {
-
+  submit(evt) {
+    adapter('register', this.state.user);
+    evt.preventDefault();
   }
 
   setValue(key, value) {
@@ -53,7 +56,7 @@ class Register extends Component {
       <form onSubmit={this.submit.bind(this)}>
 
         {this.state.infos.map((info, infoIndex) =>
-          <div className="row">
+          <div className="row" key={infoIndex}>
             <div className="col-xs-6">
               {info.label}
             </div>
@@ -62,6 +65,7 @@ class Register extends Component {
             </div>
           </div>
         )}
+        <input type="submit" value="Registrieren!"/>
       </form>
     );
   }
@@ -76,7 +80,7 @@ class Register extends Component {
     return (
       <div>
         {info.options.map((option, optionIndex) => 
-          <div onClick={this.setValue.bind(this, info.key, option)} >{option}</div>
+          <div key={optionIndex} onClick={this.setValue.bind(this, info.key, option)} >{option}</div>
         )}
       </div>
     );
