@@ -1,5 +1,5 @@
 var url = 'http://localhost/';
-var debug = false;
+var debug = true;
 
 var mock = {
   register: {

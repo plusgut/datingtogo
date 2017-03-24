@@ -12,7 +12,11 @@ class Register extends Component {
     ];
     
     this.state = {
-      user: {},
+      user: {
+        username: 'plusgut',
+        myself: 'Mann',
+        search: 'Frau',
+      },
       infos: [{
         label: 'Username',
         key: 'username',
@@ -41,8 +45,9 @@ class Register extends Component {
   }
 
   submit(evt) {
-    adapter('register', this.state.user);
     evt.preventDefault();
+    adapter('register', this.state.user).then(setTimeout(this.props.setUser.bind(null, this.state.user), 0));
+    
   }
 
   setValue(key, value) {
@@ -71,16 +76,26 @@ class Register extends Component {
   }
 
   inputText(info) {
+
     return (
-      <input type="text" onChange={this.setFromEvent.bind(this, info.key)} />
+      <input type="text" onChange={this.setFromEvent.bind(this, info.key)} value={this.state.user[info.key]}/>
     );
   }
 
+  getCurrentClass(key, option) {
+    if(this.state.user[key] === option) {
+      return 'active';
+    } else {
+      return '';
+    }
+  }
+
   optioninfo(info) {
+    
     return (
       <div>
         {info.options.map((option, optionIndex) => 
-          <div key={optionIndex} onClick={this.setValue.bind(this, info.key, option)} >{option}</div>
+          <div key={optionIndex} onClick={this.setValue.bind(this, info.key, option)} className={this.getCurrentClass(info.key, option)}>{option}</div>
         )}
       </div>
     );
