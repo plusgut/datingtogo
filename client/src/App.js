@@ -13,11 +13,8 @@ class App extends Component {
     };
   }
 
-  setUser(value) {
-    this.setState((state) => {
-      state.user = value;
-      return state;
-    });
+  setUser(user) {
+    this.setState({user});
   }
 
   render() {
