@@ -76,7 +76,7 @@ class Register extends Component {
     return (
       <div>
         {info.options.map((option, optionIndex) => 
-          <div onClick={this.setValue.bind(this, info.key, option)} >{option}</div>
+          <div className="selection" onClick={this.setValue.bind(this, info.key, option)} >{option}</div>
         )}
       </div>
     );
