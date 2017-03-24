@@ -84,7 +84,7 @@ class Register extends Component {
 
   getCurrentClass(key, option) {
     if(this.state.user[key] === option) {
-      return 'active';
+      return 'selection';
     } else {
       return '';
     }
@@ -95,6 +95,7 @@ class Register extends Component {
     return (
       <div>
         {info.options.map((option, optionIndex) => 
+
           <div key={optionIndex} onClick={this.setValue.bind(this, info.key, option)} className={this.getCurrentClass(info.key, option)}>{option}</div>
         )}
       </div>
