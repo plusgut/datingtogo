@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import Greeting from './Pages/Greeting/Greeting';
+import Map from './Pages/Map/Map';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: null
+    };
+  }
+
+  setUser(value) {
+    this.setState({
+      user: value
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container">
+        {this.state.user !== null && 
+          <Map user={this.state.user} logout={this.setUser.bind(this, null)} />
+        }
+        {this.state.user === null && 
+          <Greeting setUser={this.setUser.bind(this)} />
+        }
       </div>
     );
   }
