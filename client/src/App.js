@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Greeting from './Pages/Greeting/Greeting';
 import Map from './Pages/Map/Map';
+import Header from './Pages/Header/Header';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
@@ -23,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <Header />
         {this.state.user !== null && 
           <Map user={this.state.user} logout={this.setUser.bind(this, null)} />
         }

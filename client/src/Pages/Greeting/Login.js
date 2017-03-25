@@ -28,14 +28,14 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="background">
         <form onSubmit={this.submit.bind(this)}>
           <div className="row">
             <div className="col-xs-6">
               User
             </div>
             <div className="col-xs-6">
-              <input type="text" onChange={this.setUser.bind(this)} value={this.state.user}/>
+              <input type="text" className="textfeld" onChange={this.setUser.bind(this)} value={this.state.user}/>
             </div>
           </div>
           <div className="row">
@@ -43,11 +43,11 @@ class Login extends Component {
               Password
             </div>
             <div className="col-xs-6">
-              <input type="text" onChange={this.setPassword.bind(this)} value={this.state.password}/>
+              <input type="text" className="textfeld" onChange={this.setPassword.bind(this)} value={this.state.password}/>
             </div>
           </div>
-          <input type="submit" value="Login!"/>
-          <input type="button" value="Register!" onClick={this.props.register}/>
+          <input type="submit" className="button" value="Login!"/>
+          <input type="button" className="button" value="Register!" onClick={this.props.register}/>
         </form>
       </div>
     );

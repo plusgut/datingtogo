@@ -70,7 +70,7 @@ class Register extends Component {
             </div>
           </div>
         )}
-        <input type="submit" value="Registrieren!"/>
+        <input type="submit" className="button" value="Registrieren!"/>
       </form>
     );
   }
@@ -78,15 +78,15 @@ class Register extends Component {
   inputText(info) {
 
     return (
-      <input type="text" onChange={this.setFromEvent.bind(this, info.key)} value={this.state.user[info.key]}/>
+      <input type="text" className="textfeld" onChange={this.setFromEvent.bind(this, info.key)} value={this.state.user[info.key]}/>
     );
   }
 
   getCurrentClass(key, option) {
     if(this.state.user[key] === option) {
-      return 'selection';
+      return 'selection_yes';
     } else {
-      return '';
+      return 'selection_no';
     }
   }
 

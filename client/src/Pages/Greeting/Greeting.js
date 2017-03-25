@@ -18,7 +18,7 @@ class Greeting extends Component {
 
   render() {
     return (
-      <div>
+      <div className="welcome">
         {this.state.register === false &&
           <Login setUser={this.props.setUser} register={this.setRegister.bind(this, true)} />
         }
