@@ -47,6 +47,7 @@ class MapContainer extends Component {
   }
 
   getImage(user) {
+      return "heart.png";
     return user.username +'.png';
   }
 
