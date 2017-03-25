@@ -47,8 +47,6 @@
     border-width:1.5px;
     border-style:solid;
     padding-top: 10px;
-    background-image:url(../public/karomuster.jpg);
-    background-size:cover;
     margin-top: 50px;
     object-position:center;
 }
@@ -96,6 +94,9 @@
 
 .comment{
     
+    background-image:url(../public/karomuster.jpg);
+    background-size:cover;
+
     color: #ffe4e4;
     background-image:linear-gradient( #222, #4e4e4e);
     padding-left: 5px;
