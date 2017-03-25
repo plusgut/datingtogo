@@ -47,7 +47,6 @@ class MapContainer extends Component {
 
   render() {
     var position = [this.state.pos.long, this.state.pos.lat];
-
     return (
       <div>
         <span>Hello <span>{this.props.user.username}</span></span>

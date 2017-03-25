@@ -2,7 +2,7 @@ var url = 'http://localhost/';
 import debug from '../Config/debug';
 
 function mock(type) {
-  var position = [-0.481747846041145, 51.3233379650232];
+  var position = [11.6222117, 48.150102];
   return {
     register: {
       ack: true,
