@@ -7,6 +7,7 @@ import MAP_BOX from '../../Config/mapbox'
 import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
 import adapter from '../../Helper/adapter';
 
+var POLL_TIME = 2000;
 
 class MapContainer extends Component {
   constructor(props) {
@@ -21,12 +22,16 @@ class MapContainer extends Component {
       users: [],
     };
 
-    adapter('users').then((users) => {
-      this.setState({users});
-    });
+    this.updateUsers();
     navigator.geolocation.getCurrentPosition(this.setPosition.bind(this), this.handleError.bind(this));
   }
 
+  updateUsers() {
+    adapter('users').then((users) => {
+      this.setState({users});
+      setTimeout(this.updateUsers.bind(this), POLL_TIME);
+    });
+  }
   setPosition (geoposition) {
     this.setState(function(state) {
       state.pos = {

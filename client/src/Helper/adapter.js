@@ -1,7 +1,7 @@
 var url = 'http://localhost/';
 import debug from '../Config/debug';
 
-const USER_COUNT = 3;
+const USER_COUNT = 4;
 const RANDOMIZE = 5;
 function mock(type) {
   var position = [11.6222117, 48.150102];
