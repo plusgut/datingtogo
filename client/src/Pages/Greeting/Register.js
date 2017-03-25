@@ -12,7 +12,7 @@ class Register extends Component {
     
     this.state = {
       user: {
-        username: 'plusgut',
+        username: 'plusgut_0',
         myself: 'Mann',
         search: 'Frau',
       },
