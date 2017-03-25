@@ -1,5 +1,5 @@
 var url = 'http://localhost/';
-var debug = true;
+import debug from '../Config/debug';
 
 var mock = {
   register: {
