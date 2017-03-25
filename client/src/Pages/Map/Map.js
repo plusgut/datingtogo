@@ -73,13 +73,8 @@ class MapContainer extends Component {
                 accessToken={MAP_BOX}
                 center={position}
                 containerStyle={{
-<<<<<<< HEAD
-                  height: "90vh",
-                  width: "100%"
-=======
                   height: "80vh",
-                  width: "85vw"
->>>>>>> 1ec72c7175100ffa0e397436ce6ed20e163ab69c
+                  width: "100%"
                 }}>
             <Layer
               type="symbol"
