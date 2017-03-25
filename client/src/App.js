@@ -34,7 +34,7 @@ class App extends Component {
     return (
       <div className="container">
         {this.state.finished === true && 
-          <img src="BigLogo.png" alt="biglogo" />
+          <img src="BigLogo.png" alt="biglogo" width="100%" />
         }
 
         {this.state.finished !== true && 
