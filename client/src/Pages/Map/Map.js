@@ -67,15 +67,19 @@ class MapContainer extends Component {
     var position = [this.state.pos.long, this.state.pos.lat];
     return (
       <div>
-        <span>Hello <span>{this.props.user.username}</span></span>
         {this.state.pos.lat && this.state.pos.long &&
           <ReactMapboxGl
                 style="mapbox://styles/mapbox/streets-v8"
                 accessToken={MAP_BOX}
                 center={position}
                 containerStyle={{
+<<<<<<< HEAD
                   height: "90vh",
                   width: "100%"
+=======
+                  height: "80vh",
+                  width: "85vw"
+>>>>>>> 1ec72c7175100ffa0e397436ce6ed20e163ab69c
                 }}>
             <Layer
               type="symbol"
