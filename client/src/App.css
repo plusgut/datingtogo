@@ -44,3 +44,7 @@
     height: 20px;
     font-style: bold;
 }
+
+.mapboxgl-marker{
+  transition: all 5s;
+}

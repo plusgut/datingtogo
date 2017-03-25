@@ -7,7 +7,7 @@ import MAP_BOX from '../../Config/mapbox'
 import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
 import adapter from '../../Helper/adapter';
 
-var POLL_TIME = 2000;
+var POLL_TIME = 5000;
 
 class MapContainer extends Component {
   constructor(props) {

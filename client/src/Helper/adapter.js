@@ -2,7 +2,8 @@ var url = 'http://localhost/';
 import debug from '../Config/debug';
 
 const USER_COUNT = 4;
-const RANDOMIZE = 5;
+const RANDOMIZE_X = 6;
+const RANDOMIZE_Y = 5;
 function mock(type) {
   var position = [11.6222117, 48.150102];
 
@@ -10,7 +11,7 @@ function mock(type) {
   for(var i = 0; i < USER_COUNT; i++) {
     users.push({
       username: 'plusgut_' + i,
-      position: [randomize(position[0], RANDOMIZE), randomize(position[1], RANDOMIZE)]
+      position: [randomize(position[0], RANDOMIZE_X), randomize(position[1], RANDOMIZE_Y)]
     });
   }
   return {
