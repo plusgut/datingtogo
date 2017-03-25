@@ -39,11 +39,11 @@
 }
 
 .container {
-    background-color: #ff3131;
+    background-color: #cfcfcf;
     color: #222;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius:10px;
-    border-color:#ffffff;
+    border-color:#c0c0c0;
     border-width:1.5px;
     border-style:solid;
     padding-top: 10px;
@@ -147,9 +147,13 @@ body {
     font-family:'Trebuchet MS';
     font-size:50px;
     font-weight:bold;
-    color:#ff0000;
+    color:#8a0000;
     display:table-cell;
     text-align:center;
+    
+    background-image:url(../public/couple.png);
+    background-size:cover;
+
 }
 
 welcome {

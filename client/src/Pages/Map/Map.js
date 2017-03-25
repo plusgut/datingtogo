@@ -73,8 +73,8 @@ class MapContainer extends Component {
                 accessToken={MAP_BOX}
                 center={position}
                 containerStyle={{
-                  height: "80vh",
-                  width: "85vw"
+                  height: "70vh",
+                  width: "83vw"
                 }}>
             <Layer
               type="symbol"
@@ -84,7 +84,7 @@ class MapContainer extends Component {
             </Layer>
             {this.state.users.map((user, index) =>
               <Marker key={index} coordinates={user.position} anchor="bottom">
-                <img src={this.getImage(user, index)} alt={user.username} width="50px" height="40px" onClick={this.uncover.bind(this, index)}/>
+                <img src={this.getImage(user, index)} width="50px" height="50px" alt={user.username} onClick={this.uncover.bind(this, index)}/>
               </Marker>
             )}
           </ReactMapboxGl>
