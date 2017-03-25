@@ -75,7 +75,7 @@ class MapContainer extends Component {
                 center={position}
                 containerStyle={{
                   height: "90vh",
-                  width: "90vw"
+                  width: "100%"
                 }}>
             <Layer
               type="symbol"
