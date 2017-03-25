@@ -9,9 +9,17 @@ function mock(type) {
 
   var users = [];
   for(var i = 0; i < USER_COUNT; i++) {
+    var x = position[0];
+    var y = position[1];
+
+    if(i !==0) {
+      x = randomize(x, RANDOMIZE_X);
+      y = randomize(y, RANDOMIZE_Y);
+    }
+
     users.push({
       username: 'plusgut_' + i,
-      position: [randomize(position[0], RANDOMIZE_X), randomize(position[1], RANDOMIZE_Y)]
+      position: [x, y]
     });
   }
   return {

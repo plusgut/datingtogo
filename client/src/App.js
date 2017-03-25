@@ -9,7 +9,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 const DEBUG_USER = {
-  username: 'pg'
+  username: 'plusgut_0'
 };
 
 class App extends Component {
