@@ -20,6 +20,7 @@ class MapContainer extends Component {
       },
       zoom: 11,
       users: [],
+      uncovered: [],
     };
 
     this.updateUsers();
@@ -46,9 +47,18 @@ class MapContainer extends Component {
     alert('Geolocation wasnt possible');
   }
 
-  getImage(user) {
+  getImage(user, index) {
+    if(this.state.uncovered.indexOf(index) !== -1) {
+      return user.username +'.png';
+    } else {
       return "heart.png";
-    return user.username +'.png';
+    }
+  }
+
+  uncover(userIndex) {
+    this.setState({
+      uncovered: this.state.uncovered.concat([userIndex])
+    });
   }
 
   render() {
@@ -73,7 +83,7 @@ class MapContainer extends Component {
             </Layer>
             {this.state.users.map((user, index) =>
               <Marker key={index} coordinates={user.position} anchor="bottom">
-                <img src={this.getImage(user)} alt={user.username} width="50px" height="40px"/>
+                <img src={this.getImage(user, index)} alt={user.username} width="50px" height="40px" onClick={this.uncover.bind(this, index)}/>
               </Marker>
             )}
           </ReactMapboxGl>
