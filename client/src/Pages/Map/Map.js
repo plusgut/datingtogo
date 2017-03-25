@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import api_key from '../../Config/google';
+// import api_key from '../../Config/google';
 //import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 // import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 // import { BaiduMap } from 'react-baidu-map';
