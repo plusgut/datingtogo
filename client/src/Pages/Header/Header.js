@@ -4,7 +4,10 @@ import React, { Component } from 'react';
 class Header extends Component {
     render () {
         return (
-            <div className="header">Dating2Go</div>
+            <div className="header">
+                Destiny
+                <div className="subheader">MAKE ONLINE DATING<br />OFFLINE AGAIN</div>
+            </div>
         );
     }
 }

@@ -26,6 +26,7 @@
 }
 
 .col-xs-6 {
+    opacity:1.0;
     color: #222;
     font-size: x-large;
     height:auto;
@@ -39,41 +40,55 @@
 }
 
 .container {
-    background-color: #cfcfcf;
+
+    background: rgba(255, 255, 255, .85);
     color: #222;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius:10px;
-    border-color:#c0c0c0;
+    border-color:#e0e0e0;
     border-width:1.5px;
     border-style:solid;
     padding-top: 10px;
-    margin-top: 50px;
+    padding-bottom:10px;
+    margin-top: 20px;
     object-position:center;
 }
 
 .selection_yes {
+    opacity:1.0;
     background-color: #cfcfcf;
     color: #222;
     height: 40px;
     font-style: bold;
-    border-radius:5px;
+    border-radius:10px;
     margin-bottom:5px;
     padding-left: 5px;
+    padding-top: 5px;
     font-weight:bold;
     border:thin;
     
+    display:table-cell;
+    object-position:center;
+    width:200px;
     background-image:url(../public/button.jpg);
     background-size:cover;
 }
 
 .selection_no {
+    
+    padding-top: 5px;
+    width:200px;
+    opacity:1.0;
     background-color: #f0f0f0;
     color: #222;
     height: 40px;
     font-style: bold;
-    border-radius:5px;
+    border-radius:10px;
     margin-bottom:5px;
     padding-left: 5px;
+    
+    display:table-cell;
+    object-position:center;
 }
 
 
@@ -82,7 +97,7 @@
     border:solid;
     border-width:1px;
     border-color: white;
-    border-radius:5px;
+    border-radius:10px;
     margin-left: 5px;
     margin-bottom:10px;
     font-size:20px;
@@ -112,7 +127,7 @@
     border:solid;
     border-color: black;
     border-width: 1px;
-    border-radius:5px;
+    border-radius:10px;
     background-color: #222;
     margin-left: 5px;
     margin-bottom:10px;
@@ -123,6 +138,7 @@
 }
 
 .row {
+    opacity:1.0;
     margin-bottom: 30px;
     text-align:center;
     display:table-row;
@@ -143,25 +159,39 @@ body {
     position:center;
     top: 0px;
     left: 0px;
-    height:100px;
+    height:150px;
+    width:300px;
     font-family:'Trebuchet MS';
     font-size:50px;
     font-weight:bold;
-    color:#8a0000;
+    color:#fa0000;
     display:table-cell;
     text-align:center;
     
     background-image:url(../public/couple.png);
     background-size:cover;
-
 }
 
-welcome {
+.subheader{
+    opacity: 0.95;
+    color:#d56d6d;
+    font-size: 20px;
+    margin: 0px;
+    padding-top:0px;
+    font-weight:bold;
+    text-align:center;
+    display:table-cell;
+    transform: rotate(-5deg);
+    margin: 0 auto;
+    width: 1%;
+}
+
+.welcome {
     font-size: 20px;
     color: #222;
     text-align: center;
 }
 
 .mapboxgl-marker{
-  transition: all 5s;
+  transition: all 6s;
 }

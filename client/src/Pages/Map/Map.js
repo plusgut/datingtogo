@@ -7,7 +7,7 @@ import MAP_BOX from '../../Config/mapbox'
 import ReactMapboxGl, { Layer, Feature, Marker } from "react-mapbox-gl";
 import adapter from '../../Helper/adapter';
 
-var POLL_TIME = 5000;
+var POLL_TIME = 6000;
 
 class MapContainer extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class MapContainer extends Component {
         lat: null,
         long: null,
       },
-      zoom: 11,
+      zoom: 14,
       users: [],
       uncovered: [],
     };
@@ -70,11 +70,12 @@ class MapContainer extends Component {
         {this.state.pos.lat && this.state.pos.long &&
           <ReactMapboxGl
                 style="mapbox://styles/mapbox/streets-v8"
+        zoom={[this.state.zoom]}
                 accessToken={MAP_BOX}
                 center={position}
                 containerStyle={{
                   height: "70vh",
-                  width: "83vw"
+                  width: "100%",
                 }}>
             <Layer
               type="symbol"

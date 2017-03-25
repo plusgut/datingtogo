@@ -46,8 +46,8 @@ class Login extends Component {
               <input type="password" className="textfeld" onChange={this.setPassword.bind(this)} value={this.state.password}/>
             </div>
           </div>
-          <input type="submit" className="button" value="Login!"/>
-          <input type="button" className="button" value="Register!" onClick={this.props.register}/>
+          <input type="submit" className="button" value="Anmelden"/>
+          <input type="button" className="button" value="Profil erstellen" onClick={this.props.register}/>
         </form>
       </div>
     );
