@@ -24,15 +24,29 @@ class App extends Component {
     this.setState({user});
   }
 
+  showLogo() {
+    this.setState({
+      finished: true
+    });
+  }
+
   render() {
     return (
       <div className="container">
-        <Header />
-        {this.state.user !== null && 
-          <Map user={this.state.user} logout={this.setUser.bind(this, null)} />
+        {this.state.finished === true && 
+          <img src="BigLogo.png" alt="biglogo" />
         }
-        {this.state.user === null && 
-          <Greeting setUser={this.setUser.bind(this)} />
+
+        {this.state.finished !== true && 
+          <div>
+            <Header showLogo={this.showLogo.bind(this)} />
+            {this.state.user !== null && 
+              <Map user={this.state.user} logout={this.setUser.bind(this, null)} />
+            }
+            {this.state.user === null && 
+              <Greeting setUser={this.setUser.bind(this)} />
+            }
+          </div>
         }
       </div>
     );
