@@ -3,22 +3,25 @@ import React, { Component } from 'react';
 import Greeting from './Pages/Greeting/Greeting';
 import Map from './Pages/Map/Map';
 import Header from './Pages/Header/Header';
+import debug from './Config/debug';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './App.css';
+
+const DEBUG_USER = {
+  username: 'pg'
+};
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: null
+      user: debug ? DEBUG_USER : null
     };
   }
 
-  setUser(value) {
-    this.setState((state) => {
-      state.user = value;
-      return state;
-    });
+  setUser(user) {
+    this.setState({user});
   }
 
   render() {

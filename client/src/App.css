@@ -156,4 +156,6 @@ welcome {
     color:#222;
     text-align:center;
 
+.mapboxgl-marker{
+  transition: all 5s;
 }

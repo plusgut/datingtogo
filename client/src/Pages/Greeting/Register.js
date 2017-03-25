@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import adapter from '../../Helper/adapter';
 
-
 class Register extends Component {
   constructor(props) {
     super(props);
