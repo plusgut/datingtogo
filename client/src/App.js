@@ -9,14 +9,14 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 const DEBUG_USER = {
-    username: 'plusgut_0'
+  username: 'plusgut'
 };
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: debug ? null : null
+      user: null
     };
   }
 

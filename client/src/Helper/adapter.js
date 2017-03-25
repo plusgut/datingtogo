@@ -1,14 +1,14 @@
 var url = 'http://localhost/';
 import debug from '../Config/debug';
 
-const USER_COUNT = 4;
+const USER_NAMES = ['plusgut', 'plusgut_1', 'plusgut_2', 'plusgut_3'];
 const RANDOMIZE_X = 6;
 const RANDOMIZE_Y = 5;
 function mock(type) {
   var position = [11.6222117, 48.150102];
 
   var users = [];
-  for(var i = 0; i < USER_COUNT; i++) {
+  for(var i = 0; i < USER_NAMES.length; i++) {
     var x = position[0];
     var y = position[1];
 
@@ -18,7 +18,7 @@ function mock(type) {
     }
 
     users.push({
-      username: 'plusgut_' + i,
+      username: USER_NAMES[i],
       position: [x, y]
     });
   }

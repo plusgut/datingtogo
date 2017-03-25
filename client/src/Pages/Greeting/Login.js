@@ -4,19 +4,19 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: '',
+      username: '',
       password: '',
     };
   }
   
   submit(evt) {
-    this.props.setUser(this.state.user);
+    this.props.setUser({username: this.state.username});
     evt.preventDefault();
   }
   
   setUser(evt) {
     this.setState({
-      user: evt.target.value,
+      username: evt.target.value,
     });
   }
 
@@ -43,7 +43,7 @@ class Login extends Component {
               Password
             </div>
             <div className="col-xs-6">
-              <input type="text" className="textfeld" onChange={this.setPassword.bind(this)} value={this.state.password}/>
+              <input type="password" className="textfeld" onChange={this.setPassword.bind(this)} value={this.state.password}/>
             </div>
           </div>
           <input type="submit" className="button" value="Login!"/>
