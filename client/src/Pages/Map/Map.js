@@ -48,7 +48,9 @@ class MapContainer extends Component {
   }
 
   getImage(user, index) {
-    if(this.state.uncovered.indexOf(index) !== -1) {
+    if(user.username === this.props.user.username) {
+      return 'pin.png';
+    } else if(this.state.uncovered.indexOf(index) !== -1) {
       return user.username +'.png';
     } else {
       return "heart.png";
